@@ -1,0 +1,7 @@
+{
+    "harper.linters.Dashes": false,
+    "harper.linters.SentenceCapitalization": false,
+    "harper.linters.NounCountability": false, 
+    "harper.linters.CapitalizePersonalPronouns": false, 
+    "harper.linters.LongSentences": false, 
+}
