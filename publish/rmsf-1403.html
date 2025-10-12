@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>Rewrite mean value property</title><link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/main.css">
+<meta name="viewport" content="width=device-width"><title>Removable singularities</title><link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/main.css">
 <link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -55,23 +55,16 @@
       minRuleThickness: 0.05,
     });
   });
-</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/lecture-1.html'" title="Review of holomorphic functions">« Review of holomorphic functions</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Exegesis"><details open><summary id="rmsf-1301"><header><h1><span class="taxon">Exegesis. </span>Rewrite mean value property <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1301.html">[rmsf-1301]</a></h1><div class="metadata"><ul></ul></div></header></summary>
-<p>$\gdef\d{\operatorname{d}}$
-$\gdef\spaces#1{~ #1 ~}$</p>
-<p>There is a way to make <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1300.html" title="Mean value property [rmsf-1300]">this formula</a></span> nicer. Namely, if we send $w$ around at uniform speed counterclockwise, then we see the following formula</p>
-<p>$$ \frac{\d w}{w - z} \spaces= \frac{i \cdot |\d w|}{r} $$</p>
-<p>The $i$ comes from the fact that $\d w$ is perpendicular to $w-z$: the tangent to circle is perpendicular to line emanating from the center of circle. Substituting this in to the integral, we find</p>
-<p>$$ f(z) \spaces= \frac{1}{2\pi i} \int_{\partial \overline D(z,r)} \frac{f(w)}{w - z} \d w $$</p>
-<p>Here it should be implicit that we’re supposed to move around $\partial \overline D(z,r)$ in a counterclockwise direction.</p>
-<p><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1301.html" title="Rewrite mean value property [rmsf-1301]">This formula</a></span> is nicer: one reason is that in fact it is valid with $z$ replaced by <em>any</em> point inside the disk $D(z,r)$. That’s the <em></em><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1400.html" title="Cauchy integral formula [rmsf-1400]">Cauchy integral formula</a></span>.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>References</h1></header></summary><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1300"><header><h1><span class="taxon">Theorem. </span>Mean value property <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1300.html">[rmsf-1300]</a></h1><div class="metadata"><ul></ul></div></header></summary>
-<p>$\gdef\spaces#1{~ #1 ~}$
-$\gdef\CC{\mathbb{C}}$
-$\gdef\d{\operatorname{d}}$</p>
-<p>Let $f: U \to \CC$ be a <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-0002.html" title=" [rmsf-0002]">holomorphic function</a></span> on an <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-0001.html" title=" [rmsf-0001]">open subset</a></span> of $\CC$ of, and let $\overline D(z, r)$ be closed disc contained in $U$. Then the average value of $f$ on the boundary $\partial \overline D(z,r)$ is equal to the value of $f$ at the center, i.e.</p>
-<p>$$ f(z) \spaces= \frac{1}{2\pi r}\int_{\partial \overline D(z,r)} f(w) \cdot |\d w| $$</p>
-<p>Here we should be imagining $w$ tracing around the circle $\partial \overline D(z,r)$, and $\d w$ as picking up the infinitesimal arc length. The $2\pi r$ corresponds to length of the circle, i.e. $\int_{\partial \overline D(z,r)} |\d w|$.</p>
-</details></section><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1400"><header><h1><span class="taxon">Theorem. </span>Cauchy integral formula <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1400.html">[rmsf-1400]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/rmsf-1400.html'" title="Cauchy integral formula">« Cauchy integral formula</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Theorem"><details open><summary id="rmsf-1403"><header><h1><span class="taxon">Theorem. </span>Removable singularities <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1403.html">[rmsf-1403]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+<p>$\gdef\CC{\mathbb{C}}$</p>
+<p>Let $U \in \CC$ be open, and $z \in U$. Suppose $f: U \backslash \{z\} \to \CC$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span>, and is bounded in some disk around $z$. Then $f$ extends uniquely is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span> on all of $U$.</p>
+<p>So merely the fact of $f$ being bounded around $z$ implies something much stronger.</p>
+</details></section><footer><section class="block"><details open><summary><header><h1>References</h1></header></summary><section class="block" data-taxon="Definition"><details ><summary id="rmsf-1200"><header><h1><span class="taxon">Definition. </span>Holomorphic function <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html">[rmsf-1200]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+<p>$\gdef\CC{\mathbb{C}}$</p>
+<p>Let $U \in \CC$ be an <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-0001.html" title=" [rmsf-0001]">open subset</a></span>, and $f: U \to \CC$ a function. We say that $f$ is holomorphic if it is complex differentiable at $z_0$ for every $z_0 \in U$, i.e. for every $z_0 \in U$ the limit (of complex numbers)</p>
+<p>$$ \lim\limits_{z \to z_0} \frac{f(z) - f(z_0)}{z - z_0} $$</p>
+<p>exists. (The limit value is denoted $f'(z_0)$, as usual.)</p>
+</details></section></details></section><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1400"><header><h1><span class="taxon">Theorem. </span>Cauchy integral formula <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1400.html">[rmsf-1400]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\CC{\mathbb{C}}$
 $\gdef\spaces#1{~ #1 ~}$
 $\gdef\d{\operatorname{d}}$</p>

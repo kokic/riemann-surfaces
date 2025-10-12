@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>Rewrite mean value property</title><link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/main.css">
+<meta name="viewport" content="width=device-width"><title>Why do holomorphic functions exist?</title><link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/main.css">
 <link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -55,22 +55,22 @@
       minRuleThickness: 0.05,
     });
   });
-</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/lecture-1.html'" title="Review of holomorphic functions">« Review of holomorphic functions</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Exegesis"><details open><summary id="rmsf-1301"><header><h1><span class="taxon">Exegesis. </span>Rewrite mean value property <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1301.html">[rmsf-1301]</a></h1><div class="metadata"><ul></ul></div></header></summary>
-<p>$\gdef\d{\operatorname{d}}$
-$\gdef\spaces#1{~ #1 ~}$</p>
-<p>There is a way to make <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1300.html" title="Mean value property [rmsf-1300]">this formula</a></span> nicer. Namely, if we send $w$ around at uniform speed counterclockwise, then we see the following formula</p>
-<p>$$ \frac{\d w}{w - z} \spaces= \frac{i \cdot |\d w|}{r} $$</p>
-<p>The $i$ comes from the fact that $\d w$ is perpendicular to $w-z$: the tangent to circle is perpendicular to line emanating from the center of circle. Substituting this in to the integral, we find</p>
-<p>$$ f(z) \spaces= \frac{1}{2\pi i} \int_{\partial \overline D(z,r)} \frac{f(w)}{w - z} \d w $$</p>
-<p>Here it should be implicit that we’re supposed to move around $\partial \overline D(z,r)$ in a counterclockwise direction.</p>
-<p><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1301.html" title="Rewrite mean value property [rmsf-1301]">This formula</a></span> is nicer: one reason is that in fact it is valid with $z$ replaced by <em>any</em> point inside the disk $D(z,r)$. That’s the <em></em><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1400.html" title="Cauchy integral formula [rmsf-1400]">Cauchy integral formula</a></span>.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>References</h1></header></summary><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1300"><header><h1><span class="taxon">Theorem. </span>Mean value property <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1300.html">[rmsf-1300]</a></h1><div class="metadata"><ul></ul></div></header></summary>
-<p>$\gdef\spaces#1{~ #1 ~}$
-$\gdef\CC{\mathbb{C}}$
-$\gdef\d{\operatorname{d}}$</p>
-<p>Let $f: U \to \CC$ be a <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-0002.html" title=" [rmsf-0002]">holomorphic function</a></span> on an <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-0001.html" title=" [rmsf-0001]">open subset</a></span> of $\CC$ of, and let $\overline D(z, r)$ be closed disc contained in $U$. Then the average value of $f$ on the boundary $\partial \overline D(z,r)$ is equal to the value of $f$ at the center, i.e.</p>
-<p>$$ f(z) \spaces= \frac{1}{2\pi r}\int_{\partial \overline D(z,r)} f(w) \cdot |\d w| $$</p>
-<p>Here we should be imagining $w$ tracing around the circle $\partial \overline D(z,r)$, and $\d w$ as picking up the infinitesimal arc length. The $2\pi r$ corresponds to length of the circle, i.e. $\int_{\partial \overline D(z,r)} |\d w|$.</p>
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/lecture-1.html'" title="Review of holomorphic functions">« Review of holomorphic functions</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Exegesis"><details open><summary id="rmsf-1404"><header><h1><span class="taxon">Exegesis. </span>Why do <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic functions</a></span> exist? <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1404.html">[rmsf-1404]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+<p>$\gdef\CC{\mathbb{C}}$</p>
+<p>Now we have reviewed the basis of <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span> functions. But there’s one important question we should still discuss: where do <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic functions</a></span> come from? Why do they exist?</p>
+<p>The answer is that they come from a variety of sources. We’ll talk about two of the more important ones in the next lecture: they come from solution of polynomial (or more generally <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span>) equations, and also from solutions of holomorphic differential equations.</p>
+<p>But for now we’ll give a different kind of answer, First of all, the identity function $z: \CC \to \CC$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span>, as is any constant function. Second, the class of <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic functions</a></span> is closed under addition and multiplication. Thus, every polynomial is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span>. (The proof of these claims is formally just like the real variable case.) Then, we can access more <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic functions</a></span> by talking limits of polynomials, thanks to the following theorem (also a consequence of <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1400.html" title="Cauchy integral formula [rmsf-1400]">Cauchy formula</a></span>!):</p>
+<p><section class="block hide-metadata" data-taxon="Theorem"><details open><summary id="rmsf-1405"><header><h1><span class="taxon">Theorem 1. </span>Uniform limits of polynomial <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1405.html">[rmsf-1405]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+<p>$\gdef\CC{\mathbb{C}}$</p>
+<p>Suppose $f_1, f_2, \cdots$ is a sequence of <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic functions</a></span> $U \to \CC$ with pointwise limit $f: U \to \CC$. Suppose also the following stronger property: for every closed ball $\overline D \subset U$, the value</p>
+<p>$$ \sup_{z \in \overline D} |f(z) - f_i(z)| $$</p>
+<p>tends to zero as $i$ tend to $\infty$ (uniform convergence on closed balls.) Then $f$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span>.</p>
+</details></section></p>
+</details></section><footer><section class="block"><details open><summary><header><h1>References</h1></header></summary><section class="block" data-taxon="Definition"><details ><summary id="rmsf-1200"><header><h1><span class="taxon">Definition. </span>Holomorphic function <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html">[rmsf-1200]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+<p>$\gdef\CC{\mathbb{C}}$</p>
+<p>Let $U \in \CC$ be an <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-0001.html" title=" [rmsf-0001]">open subset</a></span>, and $f: U \to \CC$ a function. We say that $f$ is holomorphic if it is complex differentiable at $z_0$ for every $z_0 \in U$, i.e. for every $z_0 \in U$ the limit (of complex numbers)</p>
+<p>$$ \lim\limits_{z \to z_0} \frac{f(z) - f(z_0)}{z - z_0} $$</p>
+<p>exists. (The limit value is denoted $f'(z_0)$, as usual.)</p>
 </details></section><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1400"><header><h1><span class="taxon">Theorem. </span>Cauchy integral formula <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1400.html">[rmsf-1400]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\CC{\mathbb{C}}$
 $\gdef\spaces#1{~ #1 ~}$
@@ -104,4 +104,4 @@ $\gdef\spaces#1{~ #1 ~}$</p>
 </details></section></p>
 </details></section></details></section></footer></article>
 
-</div></body></html>
+<nav id="toc"><div class="block"><h1>Table of Contents</h1><ul class="block"><li class=""><a class="bullet" href="https://kokic.github.io/riemann-surfaces/rmsf-1405.html" title="Uniform limits of polynomial [rmsf-1405]">■</a><span class="link local" onclick="window.location.href='#rmsf-1405'"><span class="taxon">Theorem 1. </span>Uniform limits of polynomial</span></li></ul></div></nav></div></body></html>

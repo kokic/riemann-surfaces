@@ -4,4 +4,5 @@
     "harper.linters.NounCountability": false, 
     "harper.linters.CapitalizePersonalPronouns": false, 
     "harper.linters.LongSentences": false, 
+    "harper.linters.AvoidAndAlso": false, 
 }
