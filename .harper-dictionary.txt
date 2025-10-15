@@ -1,5 +1,8 @@
 biholomorphic
+biholomorphism
+biholomorphisms
 holomorphic
 travelling
 scaling
 pointwise
+bijective
