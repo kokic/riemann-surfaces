@@ -2,7 +2,12 @@
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width"><title>Some notations</title><link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/main.css">
-<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><style>
+@media only screen and (min-width: 1000px) {
+  #grid-wrapper { grid-template-columns: var(--article-max-width) var(--toc-max-width); }
+  nav#toc { max-width: max-content; }
+}
+</style><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
@@ -55,7 +60,19 @@
       minRuleThickness: 0.05,
     });
   });
-</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/lecture-1.html'" title="Review of holomorphic functions">« Review of holomorphic functions</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Notations"><details open><summary id="rmsf-1101"><header><h1><span class="taxon">Notations. </span>Some notations <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1101.html">[rmsf-1101]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+</script><script>
+    function toggleDetailsOpen() {
+        const details = document.querySelector('#toc>div>details');
+        if (window.matchMedia('(max-width: 1000px)').matches && details) {
+            details.removeAttribute('open');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', toggleDetailsOpen);
+    window.addEventListener('resize', toggleDetailsOpen);
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/lecture-1.html'" title="Review of holomorphic functions">« Review of holomorphic functions</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'article toc';">
+
+<article><section class="block" data-taxon="Notations"><details open><summary id="rmsf-1101"><header><h1><span class="taxon">Notations. </span>Some notations <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1101.html">[rmsf-1101]</a><a class="slug" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/rmsf-1101.md">[edit]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\CC{\mathbb{C}}$
 $\gdef\spaces#1{~ #1 ~}$</p>
 <p>The set of complex numbers is</p>
@@ -66,13 +83,13 @@ $\gdef\spaces#1{~ #1 ~}$</p>
 <p>$$ \overline D(z,r) \spaces= \{ w \in \CC \mid |w-z| \le r \} $$</p>
 <p>Its <em>boundary</em> is the circle</p>
 <p>$$ \partial \overline D(z,r) \spaces= \{ w \in \CC \mid |w-z| = r \} $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Definition"><details ><summary id="rmsf-1100"><header><h1><span class="taxon">Definition. </span>Open subset <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1100.html">[rmsf-1100]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Definition"><details ><summary id="rmsf-1100"><header><h1><span class="taxon">Definition. </span>Open subset <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1100.html">[rmsf-1100]</a><a class="slug" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/rmsf-1100.md">[edit]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\spaces#1{~ #1 ~}$
 $\gdef\CC{\mathbb{C}}$</p>
 <p>A subset $U \in \CC$ is called open if for every $z \in U$, there exists a positive real number $r$ such that $D(z,r) \subset U$.</p>
 <p>It is equivalent to ask that $U$ be a union of <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1101.html" title="Some notations [rmsf-1101]">open disks</a></span>.</p>
 <p>The reason we want to consider <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1100.html" title="Open subset [rmsf-1100]">open subsets</a></span> is that we want to differentiate. To differentiate, you need to know not just the values of your function at a point, but its value at all points sufficiently close to your point. An <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1100.html" title="Open subset [rmsf-1100]">open subset</a></span> is exactly a subset which, if it contains a point, contains all sufficiently close points as well.</p>
-</details></section><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1400"><header><h1><span class="taxon">Theorem. </span>Cauchy integral formula <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1400.html">[rmsf-1400]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+</details></section><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1400"><header><h1><span class="taxon">Theorem. </span>Cauchy integral formula <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1400.html">[rmsf-1400]</a><a class="slug" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/rmsf-1400.md">[edit]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\CC{\mathbb{C}}$
 $\gdef\spaces#1{~ #1 ~}$
 $\gdef\d{\operatorname{d}}$</p>
@@ -82,10 +99,10 @@ f(z) \spaces= \frac{1}{2\pi i} \int_{\partial D} \frac{f(w)}{w-z} \d w
 $$</p>
 <p>if we go around the boundary once counterclockwise in performing the integration.</p>
 <p>This formula is something of a key to the notion of <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic function</a></span>. For example, it explains why <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic function</a></span> are so regular: the dependence on $z$ in the right-hand side of the equation is easy to control; e.g. we can <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1401.html" title="Holomorphic derivative [rmsf-1401]">easily differentiate</a></span>, or even expand into a power series. Here are some corollaries:</p>
-<p><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1401"><header><h1><span class="taxon">Theorem. </span><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">Holomorphic</a></span> derivative <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1401.html">[rmsf-1401]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+<p><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1401"><header><h1><span class="taxon">Theorem. </span><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">Holomorphic</a></span> derivative <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1401.html">[rmsf-1401]</a><a class="slug" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/rmsf-1401.md">[edit]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>If $f$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span>, so is its derivative $f'$.</p>
 </details></section>
-<section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1402"><header><h1><span class="taxon">Theorem. </span><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">Holomorphic functions</a></span> are analytic <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1402.html">[rmsf-1402]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+<section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1402"><header><h1><span class="taxon">Theorem. </span><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">Holomorphic functions</a></span> are analytic <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1402.html">[rmsf-1402]</a><a class="slug" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/rmsf-1402.md">[edit]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\CC{\mathbb{C}}$
 $\gdef\spaces#1{~ #1 ~}$</p>
 <p>If $f: U \to \CC$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span> and $D(z,r)$ is any <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1101.html" title="Some notations [rmsf-1101]">open disk</a></span> contained in $U$, then the power series expansion for $f$ centered at $z$ converges in all of $D(z,r)$.</p>
@@ -98,12 +115,12 @@ $\gdef\spaces#1{~ #1 ~}$</p>
 <p>around $0$. This function $F$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span> everywhere except when $1-z-z^2=0$ i.e. when $z=\frac{1\pm\sqrt{5}}{2}$. From this we can conclude that the radius of convergence of our series $\frac{1-\sqrt{5}}{2}$. Indeed, $F$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span> in the disk with radius $\frac{\sqrt{5}-1}{2}$, so the above theorem tells us that the radius of convergence is at least $\frac{\sqrt{5}-1}{2}$; but on the other hand, the function $F$ tends to $\infty$ as $z$ approaches $\frac{1-\sqrt{5}}{2}$, and a power series can’t tend to $\infty$ inside a region where it is defined since a power series is continuous; thus the radius of convergence is also at most $\frac{\sqrt{5}-1}{2}$, whence the claim. This tells you something about the order of growth of the $F_n$.</p>
 </details></section></p>
 <p>Another application of the <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1400.html" title="Cauchy integral formula [rmsf-1400]">Cauchy integral formula</a></span> is the <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1403.html" title="Removable singularities [rmsf-1403]">removable singularities theorem</a></span>:</p>
-<p><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1403"><header><h1><span class="taxon">Theorem. </span>Removable singularities <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1403.html">[rmsf-1403]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+<p><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1403"><header><h1><span class="taxon">Theorem. </span>Removable singularities <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1403.html">[rmsf-1403]</a><a class="slug" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/rmsf-1403.md">[edit]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\CC{\mathbb{C}}$</p>
 <p>Let $U \in \CC$ be open, and $z \in U$. Suppose $f: U \backslash \{z\} \to \CC$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span>, and is bounded in some disk around $z$. Then $f$ extends uniquely is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span> on all of $U$.</p>
 <p>So merely the fact of $f$ being bounded around $z$ implies something much stronger.</p>
 </details></section></p>
-</details></section><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1402"><header><h1><span class="taxon">Theorem. </span><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">Holomorphic functions</a></span> are analytic <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1402.html">[rmsf-1402]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+</details></section><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1402"><header><h1><span class="taxon">Theorem. </span><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">Holomorphic functions</a></span> are analytic <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1402.html">[rmsf-1402]</a><a class="slug" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/rmsf-1402.md">[edit]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\CC{\mathbb{C}}$
 $\gdef\spaces#1{~ #1 ~}$</p>
 <p>If $f: U \to \CC$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span> and $D(z,r)$ is any <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1101.html" title="Some notations [rmsf-1101]">open disk</a></span> contained in $U$, then the power series expansion for $f$ centered at $z$ converges in all of $D(z,r)$.</p>
@@ -114,6 +131,4 @@ $\gdef\spaces#1{~ #1 ~}$</p>
 <p>Using this, we find that $F(z)$ is the power series expansion of</p>
 <p>$$ F(z) \spaces= \frac{1}{1-z-z^2} $$</p>
 <p>around $0$. This function $F$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span> everywhere except when $1-z-z^2=0$ i.e. when $z=\frac{1\pm\sqrt{5}}{2}$. From this we can conclude that the radius of convergence of our series $\frac{1-\sqrt{5}}{2}$. Indeed, $F$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span> in the disk with radius $\frac{\sqrt{5}-1}{2}$, so the above theorem tells us that the radius of convergence is at least $\frac{\sqrt{5}-1}{2}$; but on the other hand, the function $F$ tends to $\infty$ as $z$ approaches $\frac{1-\sqrt{5}}{2}$, and a power series can’t tend to $\infty$ inside a region where it is defined since a power series is continuous; thus the radius of convergence is also at most $\frac{\sqrt{5}-1}{2}$, whence the claim. This tells you something about the order of growth of the $F_n$.</p>
-</details></section></details></section></footer></article>
-
-</div></body></html>
+</details></section></details></section></footer></article></div></body></html>

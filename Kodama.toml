@@ -3,6 +3,12 @@ trees = "trees"
 assets = "assets"
 base-url = "https://kokic.github.io/riemann-surfaces/"
 
+[toc]
+placement = "right"
+sticky = true
+mobile-sticky = true
+max-width = "max-content"
+
 [build]
 typst-root = "./"
 short-slug = true
@@ -11,6 +17,7 @@ footer-mode = "embed"
 inline-css = false
 asref = true
 output = "./publish"
+edit = "https://github.com/kokic/riemann-surfaces/edit/main/trees/"
 
 [serve]
 edit = "vscode://file/"

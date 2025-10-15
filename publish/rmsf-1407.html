@@ -2,7 +2,12 @@
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width"><title>Riemann’s mapping theorem</title><link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/main.css">
-<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><style>
+@media only screen and (min-width: 1000px) {
+  #grid-wrapper { grid-template-columns: var(--article-max-width) var(--toc-max-width); }
+  nav#toc { max-width: max-content; }
+}
+</style><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
@@ -55,15 +60,28 @@
       minRuleThickness: 0.05,
     });
   });
-</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/rmsf-1404.html'" title="Why do holomorphic functions exist?">« Why do <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic functions</a></span> exist?</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Theorem"><details open><summary id="rmsf-1407"><header><h1><span class="taxon">Theorem. </span>Riemann’s mapping theorem <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1407.html">[rmsf-1407]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+</script><script>
+    function toggleDetailsOpen() {
+        const details = document.querySelector('#toc>div>details');
+        if (window.matchMedia('(max-width: 1000px)').matches && details) {
+            details.removeAttribute('open');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', toggleDetailsOpen);
+    window.addEventListener('resize', toggleDetailsOpen);
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/rmsf-1404.html'" title="Why do holomorphic functions exist?">« Why do <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic functions</a></span> exist?</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'article toc';">
+
+<article><section class="block" data-taxon="Theorem"><details open><summary id="rmsf-1407"><header><h1><span class="taxon">Theorem. </span>Riemann’s mapping theorem <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1407.html">[rmsf-1407]</a><a class="slug" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/rmsf-1407.md">[edit]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\CC{\mathbb{C}}$</p>
 <p>Let $U \in \CC$ be an <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1100.html" title="Open subset [rmsf-1100]">open subset</a></span> which is simply-connected and not equal to $\CC$. Then there exists a biholomorphism between $U$ and the unit disk $D = D(0,1)$.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>References</h1></header></summary><section class="block" data-taxon="Definition"><details ><summary id="rmsf-1100"><header><h1><span class="taxon">Definition. </span>Open subset <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1100.html">[rmsf-1100]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+<p>We will explain the term “simply-connected” later.</p>
+<p>There is something of a physical “proof” of this theorem, which also give some intuition for the notion of a biholomorphism. The idea is this: we can decorate the unit disk by imagining the radial lines joining the center $0$ to the boundary, and also imagining all the circles of radius $&lt; 1$ centered at $0$. We want to find the corresponding decorations of $U$; then the biholomorphism will be constructed to match these up.</p>
+<p>For this, we start by fixing a point $p \in U$ which will correspond to $0 \in D$. Then we place an electric charge at $p$, and consider the magnetic field it generates. But we do this subject to the boundary condition that the potential should be zero on the boundary of $U$. Then we can decorate $U$ by the field lines on the one hand, and by the equipotential lines on the other. These will correspond to the radial lines and the circles in $D$.</p>
+</details></section><footer><section class="block"><details open><summary><header><h1>References</h1></header></summary><section class="block" data-taxon="Definition"><details ><summary id="rmsf-1100"><header><h1><span class="taxon">Definition. </span>Open subset <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1100.html">[rmsf-1100]</a><a class="slug" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/rmsf-1100.md">[edit]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\spaces#1{~ #1 ~}$
 $\gdef\CC{\mathbb{C}}$</p>
 <p>A subset $U \in \CC$ is called open if for every $z \in U$, there exists a positive real number $r$ such that $D(z,r) \subset U$.</p>
 <p>It is equivalent to ask that $U$ be a union of <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1101.html" title="Some notations [rmsf-1101]">open disks</a></span>.</p>
 <p>The reason we want to consider <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1100.html" title="Open subset [rmsf-1100]">open subsets</a></span> is that we want to differentiate. To differentiate, you need to know not just the values of your function at a point, but its value at all points sufficiently close to your point. An <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1100.html" title="Open subset [rmsf-1100]">open subset</a></span> is exactly a subset which, if it contains a point, contains all sufficiently close points as well.</p>
-</details></section></details></section></footer></article>
-
-</div></body></html>
+</details></section></details></section></footer></article></div></body></html>

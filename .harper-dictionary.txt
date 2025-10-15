@@ -6,3 +6,4 @@ travelling
 scaling
 pointwise
 bijective
+equipotential
