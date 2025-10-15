@@ -2,7 +2,12 @@
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width"><title>Rewrite mean value property</title><link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/main.css">
-<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><style>
+@media only screen and (min-width: 1000px) {
+  #grid-wrapper { grid-template-columns: max-content var(--article-max-width); }
+  nav#toc { max-width: 60ex; }
+}
+</style><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
@@ -55,7 +60,19 @@
       minRuleThickness: 0.05,
     });
   });
-</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/lecture-1.html'" title="Review of holomorphic functions">« Review of holomorphic functions</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Exegesis"><details open><summary id="rmsf-1301"><header><h1><span class="taxon">Exegesis. </span>Rewrite mean value property <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1301.html">[rmsf-1301]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+</script><script>
+    function toggleDetailsOpen() {
+        const details = document.querySelector('#toc>div>details');
+        if (window.matchMedia('(max-width: 1000px)').matches && details) {
+            details.removeAttribute('open');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', toggleDetailsOpen);
+    window.addEventListener('resize', toggleDetailsOpen);
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/lecture-1.html'" title="Review of holomorphic functions">« Review of holomorphic functions</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'toc article';">
+
+<article><section class="block" data-taxon="Exegesis"><details open><summary id="rmsf-1301"><header><h1><span class="taxon">Exegesis. </span>Rewrite mean value property <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1301.html">[rmsf-1301]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\d{\operatorname{d}}$
 $\gdef\spaces#1{~ #1 ~}$</p>
 <p>There is a way to make <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1300.html" title="Mean value property [rmsf-1300]">this formula</a></span> nicer. Namely, if we send $w$ around at uniform speed counterclockwise, then we see the following formula</p>
@@ -102,6 +119,4 @@ $\gdef\spaces#1{~ #1 ~}$</p>
 <p>Let $U \in \CC$ be open, and $z \in U$. Suppose $f: U \backslash \{z\} \to \CC$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span>, and is bounded in some disk around $z$. Then $f$ extends uniquely is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span> on all of $U$.</p>
 <p>So merely the fact of $f$ being bounded around $z$ implies something much stronger.</p>
 </details></section></p>
-</details></section></details></section></footer></article>
-
-</div></body></html>
+</details></section></details></section></footer></article></div></body></html>

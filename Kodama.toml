@@ -3,6 +3,11 @@ trees = "trees"
 assets = "assets"
 base-url = "https://kokic.github.io/riemann-surfaces/"
 
+[toc]
+placement = "left"
+sticky = true
+max-width = "60ex"
+
 [build]
 typst-root = "./"
 short-slug = true

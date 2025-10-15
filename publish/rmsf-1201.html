@@ -2,7 +2,12 @@
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width"><title>Holomorphic from the Geometric perspective</title><link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/main.css">
-<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><style>
+@media only screen and (min-width: 1000px) {
+  #grid-wrapper { grid-template-columns: max-content var(--article-max-width); }
+  nav#toc { max-width: 60ex; }
+}
+</style><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
@@ -55,7 +60,19 @@
       minRuleThickness: 0.05,
     });
   });
-</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/lecture-1.html'" title="Review of holomorphic functions">« Review of holomorphic functions</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Exegesis"><details open><summary id="rmsf-1201"><header><h1><span class="taxon">Exegesis. </span><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">Holomorphic</a></span> from the Geometric perspective <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1201.html">[rmsf-1201]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+</script><script>
+    function toggleDetailsOpen() {
+        const details = document.querySelector('#toc>div>details');
+        if (window.matchMedia('(max-width: 1000px)').matches && details) {
+            details.removeAttribute('open');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', toggleDetailsOpen);
+    window.addEventListener('resize', toggleDetailsOpen);
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/lecture-1.html'" title="Review of holomorphic functions">« Review of holomorphic functions</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'toc article';">
+
+<article><section class="block" data-taxon="Exegesis"><details open><summary id="rmsf-1201"><header><h1><span class="taxon">Exegesis. </span><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">Holomorphic</a></span> from the Geometric perspective <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1201.html">[rmsf-1201]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\d{\operatorname{d}}$</p>
 <p>There are two ways of thinking about <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">this definition</a></span>. One is that it is the complex analog of the usual notion of a differentiable function of one real variable. So insofar as the complex numbers, with its algebraic operations and its notion of absolute value, the notion of a <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic function</a></span> is like the notion of a real differentiable function.</p>
 <p>But this perspective hides the magic of <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic functions</a></span>, which in many ways are very different from real differentiable functions. To bring out the magic, it’s helpful to think geometrically, viewing the complex numbers as the plane $\R^2$ and thus thinking of $f$ as a function of two real variables.</p>
@@ -78,6 +95,4 @@ $\gdef\d{\operatorname{d}}$</p>
 <p>Let $f: U \to \CC$ be a <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-0002.html" title=" [rmsf-0002]">holomorphic function</a></span> on an <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-0001.html" title=" [rmsf-0001]">open subset</a></span> of $\CC$ of, and let $\overline D(z, r)$ be closed disc contained in $U$. Then the average value of $f$ on the boundary $\partial \overline D(z,r)$ is equal to the value of $f$ at the center, i.e.</p>
 <p>$$ f(z) \spaces= \frac{1}{2\pi r}\int_{\partial \overline D(z,r)} f(w) \cdot |\d w| $$</p>
 <p>Here we should be imagining $w$ tracing around the circle $\partial \overline D(z,r)$, and $\d w$ as picking up the infinitesimal arc length. The $2\pi r$ corresponds to length of the circle, i.e. $\int_{\partial \overline D(z,r)} |\d w|$.</p>
-</details></section></details></section></footer></article>
-
-</div></body></html>
+</details></section></details></section></footer></article></div></body></html>

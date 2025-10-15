@@ -2,7 +2,12 @@
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width"><title>Dustin Clausen</title><link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/main.css">
-<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><style>
+@media only screen and (min-width: 1000px) {
+  #grid-wrapper { grid-template-columns: max-content var(--article-max-width); }
+  nav#toc { max-width: 60ex; }
+}
+</style><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
@@ -55,7 +60,19 @@
       minRuleThickness: 0.05,
     });
   });
-</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/index.html'" title="Riemann Surfaces">« Riemann Surfaces</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Person"><details open><summary id="person-dustin-clausen"><header><h1><span class="taxon">Person. </span>Dustin Clausen <a class="slug" href="https://kokic.github.io/riemann-surfaces/person/dustin-clausen.html">[dustin-clausen]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link external"><a href="https://www.ihes.fr/" title="Institut des Hautes Études Scientifiques [https://www.ihes.fr/]">Institut des Hautes Études Scientifiques</a></span></li><li class="meta-item">Permanent professor</li><li class="meta-item"><span class="link external"><a href="https://www.ihes.fr/~dustin/" title="www.ihes.fr/~dustin [https://www.ihes.fr/~dustin/]">www.ihes.fr/~dustin</a></span></li></ul></div></header></summary>
+</script><script>
+    function toggleDetailsOpen() {
+        const details = document.querySelector('#toc>div>details');
+        if (window.matchMedia('(max-width: 1000px)').matches && details) {
+            details.removeAttribute('open');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', toggleDetailsOpen);
+    window.addEventListener('resize', toggleDetailsOpen);
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/index.html'" title="Riemann Surfaces">« Riemann Surfaces</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'toc article';">
+
+<article><section class="block" data-taxon="Person"><details open><summary id="person-dustin-clausen"><header><h1><span class="taxon">Person. </span>Dustin Clausen <a class="slug" href="https://kokic.github.io/riemann-surfaces/person/dustin-clausen.html">[dustin-clausen]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link external"><a href="https://www.ihes.fr/" title="Institut des Hautes Études Scientifiques [https://www.ihes.fr/]">Institut des Hautes Études Scientifiques</a></span></li><li class="meta-item">Permanent professor</li><li class="meta-item"><span class="link external"><a href="https://www.ihes.fr/~dustin/" title="www.ihes.fr/~dustin [https://www.ihes.fr/~dustin/]">www.ihes.fr/~dustin</a></span></li></ul></div></header></summary>
 <p>Mathematician with interests in algebraic K-theory, number theory, analytic geometry, functional analysis, and homotopy theory. PhD from MIT in 2013 under the supervision of Jacob Lurie.</p>
 </details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>Riemann Surfaces <a class="slug" href="https://kokic.github.io/riemann-surfaces/index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">September 3, 2014 - June 24, 2015</li><li class="meta-item"><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/person/dustin-clausen.html" title="Dustin Clausen [person/dustin-clausen]">Dustin Clausen</a></span></li></ul></div></header></summary>
 <p>This is a Markdown transcription of <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/person/dustin-clausen.html" title="Dustin Clausen [person/dustin-clausen]">Dustin Clausen</a></span>’s <span class="link external"><a href="https://www.ihes.fr/~dustin/#pagenotes" title="course notes [https://www.ihes.fr/~dustin/#pagenotes]">course notes</a></span> on “Riemann Surfaces” (PDFs). All explanatory rights belong to <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/person/dustin-clausen.html" title="Dustin Clausen [person/dustin-clausen]">Dustin Clausen</a></span>. This transcription has been created and shared with the <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/person/dustin-clausen.html" title="Dustin Clausen [person/dustin-clausen]">author</a></span>’s permission. View the <span class="link external"><a href="https://github.com/kokic/riemann-surfaces" title="source on GitHub [https://github.com/kokic/riemann-surfaces]">source on GitHub</a></span>.</p>
@@ -309,6 +326,4 @@ $\gdef\spaces#1{~ #1 ~}$</p>
 <p>Let $U \in \CC$ be an <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1100.html" title="Open subset [rmsf-1100]">open subset</a></span> which is simply-connected and not equal to $\CC$. Then there exists a biholomorphism between $U$ and the unit disk $D = D(0,1)$.</p>
 </details></section></p>
 </details></section></p>
-</details></section></details></section></footer></article>
-
-</div></body></html>
+</details></section></details></section></footer></article></div></body></html>

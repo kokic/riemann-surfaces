@@ -2,7 +2,12 @@
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width"><title>Some notations</title><link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/main.css">
-<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><style>
+@media only screen and (min-width: 1000px) {
+  #grid-wrapper { grid-template-columns: max-content var(--article-max-width); }
+  nav#toc { max-width: 60ex; }
+}
+</style><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
@@ -55,7 +60,19 @@
       minRuleThickness: 0.05,
     });
   });
-</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/lecture-1.html'" title="Review of holomorphic functions">« Review of holomorphic functions</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Notations"><details open><summary id="rmsf-1101"><header><h1><span class="taxon">Notations. </span>Some notations <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1101.html">[rmsf-1101]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+</script><script>
+    function toggleDetailsOpen() {
+        const details = document.querySelector('#toc>div>details');
+        if (window.matchMedia('(max-width: 1000px)').matches && details) {
+            details.removeAttribute('open');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', toggleDetailsOpen);
+    window.addEventListener('resize', toggleDetailsOpen);
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/lecture-1.html'" title="Review of holomorphic functions">« Review of holomorphic functions</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'toc article';">
+
+<article><section class="block" data-taxon="Notations"><details open><summary id="rmsf-1101"><header><h1><span class="taxon">Notations. </span>Some notations <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1101.html">[rmsf-1101]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\CC{\mathbb{C}}$
 $\gdef\spaces#1{~ #1 ~}$</p>
 <p>The set of complex numbers is</p>
@@ -114,6 +131,4 @@ $\gdef\spaces#1{~ #1 ~}$</p>
 <p>Using this, we find that $F(z)$ is the power series expansion of</p>
 <p>$$ F(z) \spaces= \frac{1}{1-z-z^2} $$</p>
 <p>around $0$. This function $F$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span> everywhere except when $1-z-z^2=0$ i.e. when $z=\frac{1\pm\sqrt{5}}{2}$. From this we can conclude that the radius of convergence of our series $\frac{1-\sqrt{5}}{2}$. Indeed, $F$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span> in the disk with radius $\frac{\sqrt{5}-1}{2}$, so the above theorem tells us that the radius of convergence is at least $\frac{\sqrt{5}-1}{2}$; but on the other hand, the function $F$ tends to $\infty$ as $z$ approaches $\frac{1-\sqrt{5}}{2}$, and a power series can’t tend to $\infty$ inside a region where it is defined since a power series is continuous; thus the radius of convergence is also at most $\frac{\sqrt{5}-1}{2}$, whence the claim. This tells you something about the order of growth of the $F_n$.</p>
-</details></section></details></section></footer></article>
-
-</div></body></html>
+</details></section></details></section></footer></article></div></body></html>

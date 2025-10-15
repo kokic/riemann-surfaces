@@ -2,7 +2,12 @@
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width"><title>Mean value property</title><link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/main.css">
-<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://kokic.github.io/riemann-surfaces/typst.css"><style>
+@media only screen and (min-width: 1000px) {
+  #grid-wrapper { grid-template-columns: max-content var(--article-max-width); }
+  nav#toc { max-width: 60ex; }
+}
+</style><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
@@ -55,7 +60,19 @@
       minRuleThickness: 0.05,
     });
   });
-</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/lecture-1.html'" title="Review of holomorphic functions">« Review of holomorphic functions</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Theorem"><details open><summary id="rmsf-1300"><header><h1><span class="taxon">Theorem. </span>Mean value property <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1300.html">[rmsf-1300]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+</script><script>
+    function toggleDetailsOpen() {
+        const details = document.querySelector('#toc>div>details');
+        if (window.matchMedia('(max-width: 1000px)').matches && details) {
+            details.removeAttribute('open');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', toggleDetailsOpen);
+    window.addEventListener('resize', toggleDetailsOpen);
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='https://kokic.github.io/riemann-surfaces/lecture-1.html'" title="Review of holomorphic functions">« Review of holomorphic functions</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'toc article';">
+
+<article><section class="block" data-taxon="Theorem"><details open><summary id="rmsf-1300"><header><h1><span class="taxon">Theorem. </span>Mean value property <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1300.html">[rmsf-1300]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\spaces#1{~ #1 ~}$
 $\gdef\CC{\mathbb{C}}$
 $\gdef\d{\operatorname{d}}$</p>
@@ -82,6 +99,4 @@ $\gdef\spaces#1{~ #1 ~}$</p>
 <p>$$ f(z) \spaces= \frac{1}{2\pi i} \int_{\partial \overline D(z,r)} \frac{f(w)}{w - z} \d w $$</p>
 <p>Here it should be implicit that we’re supposed to move around $\partial \overline D(z,r)$ in a counterclockwise direction.</p>
 <p><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1301.html" title="Rewrite mean value property [rmsf-1301]">This formula</a></span> is nicer: one reason is that in fact it is valid with $z$ replaced by <em>any</em> point inside the disk $D(z,r)$. That’s the <em></em><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1400.html" title="Cauchy integral formula [rmsf-1400]">Cauchy integral formula</a></span>.</p>
-</details></section></details></section></footer></article>
-
-</div></body></html>
+</details></section></details></section></footer></article></div></body></html>
