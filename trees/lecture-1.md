@@ -4,6 +4,7 @@ title: Review of holomorphic functions
 taxon: lecture
 date: September 3, 2014
 author: [Dustin Clausen](../person/dustin-clausen)
+pdf: [PDF](https://www.ihes.fr/~dustin/files/RiemannSurfaces/RS1.pdf)
 ---
 
 $\gdef\spaces#1{~ #1 ~}$
@@ -28,3 +29,4 @@ Now we can say what is a [holomorphic function][holomorphic].
 [+](./rmsf-1301.md#:embed)
 [+](./rmsf-1400.md#:embed)
 [+](./rmsf-1404.md#:embed)
+[+](./rmsf-1500.md#:embed)
