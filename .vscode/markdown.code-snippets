@@ -1,8 +1,128 @@
 {
-    "holomorphic": {
-        "prefix": "holomorphic",
-        "body": [
-            "[holomorphic]: ./rmsf-1200.md"
-        ],
-    }
+  "rmsf-1405": {
+    "prefix": "Uniform limits of polynomial",
+    "body": [
+      "[uniform-limits-of-polynomial]: /trees/rmsf-1405.md"
+    ],
+    "description": "Theorem. "
+  },
+  "rmsf-1500": {
+    "prefix": "Review the geometry of $e^z$ and $n^{th}$",
+    "body": [
+      "[review-the-geometry-of-$e^z$-and-$n^{th}$]: /trees/rmsf-1500.md"
+    ],
+    "description": "Exegesis. "
+  },
+  "rmsf-1407": {
+    "prefix": "Riemann’s mapping theorem",
+    "body": [
+      "[riemann’s-mapping-theorem]: /trees/rmsf-1407.md"
+    ],
+    "description": "Theorem. "
+  },
+  "rmsf-1401": {
+    "prefix": "Holomorphic derivative",
+    "body": [
+      "[holomorphic-derivative]: /trees/rmsf-1401.md"
+    ],
+    "description": "Theorem. "
+  },
+  "rmsf-1404": {
+    "prefix": "Why do holomorphic functions exist?",
+    "body": [
+      "[why-do-holomorphic-functions-exist?]: /trees/rmsf-1404.md"
+    ],
+    "description": "Exegesis. "
+  },
+  "rmsf-1101": {
+    "prefix": "Some notations",
+    "body": [
+      "[some-notations]: /trees/rmsf-1101.md"
+    ],
+    "description": "Notations. "
+  },
+  "rmsf-1301": {
+    "prefix": "Rewrite mean value property",
+    "body": [
+      "[rewrite-mean-value-property]: /trees/rmsf-1301.md"
+    ],
+    "description": "Exegesis. "
+  },
+  "lecture-1": {
+    "prefix": "Review of holomorphic functions",
+    "body": [
+      "[review-of-holomorphic-functions]: /trees/lecture-1.md"
+    ],
+    "description": "Lecture. "
+  },
+  "rmsf-1201": {
+    "prefix": "Holomorphic from the Geometric perspective",
+    "body": [
+      "[holomorphic-from-the-geometric-perspective]: /trees/rmsf-1201.md"
+    ],
+    "description": "Exegesis. "
+  },
+  "rmsf-1100": {
+    "prefix": "Open subset",
+    "body": [
+      "[open-subset]: /trees/rmsf-1100.md"
+    ],
+    "description": "Definition. "
+  },
+  "person/dustin-clausen": {
+    "prefix": "Dustin Clausen",
+    "body": [
+      "[dustin-clausen]: /trees/person/dustin-clausen.md"
+    ],
+    "description": "Person. "
+  },
+  "rmsf-1200": {
+    "prefix": "Holomorphic function",
+    "body": [
+      "[holomorphic-function]: /trees/rmsf-1200.md"
+    ],
+    "description": "Definition. "
+  },
+  "rmsf-1400": {
+    "prefix": "Cauchy integral formula",
+    "body": [
+      "[cauchy-integral-formula]: /trees/rmsf-1400.md"
+    ],
+    "description": "Theorem. "
+  },
+  "rmsf-1402": {
+    "prefix": "Holomorphic functions are analytic",
+    "body": [
+      "[holomorphic-functions-are-analytic]: /trees/rmsf-1402.md"
+    ],
+    "description": "Theorem. "
+  },
+  "rmsf-1403": {
+    "prefix": "Removable singularities",
+    "body": [
+      "[removable-singularities]: /trees/rmsf-1403.md"
+    ],
+    "description": "Theorem. "
+  },
+  "lecture-2": {
+    "prefix": "Algebraic functions and analytic continuation",
+    "body": [
+      "[algebraic-functions-and-analytic-continuation]: /trees/lecture-2.md"
+    ],
+    "description": "Lecture. "
+  },
+  "rmsf-1406": {
+    "prefix": "Biholomorphism",
+    "body": [
+      "[biholomorphism]: /trees/rmsf-1406.md"
+    ],
+    "description": "Definition. "
+  },
+  "rmsf-1300": {
+    "prefix": "Mean value property",
+    "body": [
+      "[mean-value-property]: /trees/rmsf-1300.md"
+    ],
+    "description": "Theorem. "
+  }
 }

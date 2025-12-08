@@ -7,3 +7,5 @@ scaling
 pointwise
 bijective
 equipotential
+algebraicity
+connectedness

@@ -2,6 +2,7 @@
 ---
 title: Review of holomorphic functions
 taxon: lecture
+asref: false
 date: September 3, 2014
 author: [Dustin Clausen](../person/dustin-clausen)
 pdf: [PDF](https://www.ihes.fr/~dustin/files/RiemannSurfaces/RS1.pdf)
