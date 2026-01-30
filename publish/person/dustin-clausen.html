@@ -2,7 +2,7 @@
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width"><title>Dustin Clausen</title><link rel="icon" href="https://kokic.github.io/riemann-surfaces/assets/favicon.ico" /><template id="inline-section">
-  <section class="block" data-taxon="">
+  <section class="inline block" data-taxon="">
     <details open="">
       <summary>
         <header>
@@ -460,6 +460,38 @@
       }
     }
   }
+</script><script>
+  (() => {
+    const url = "/kodama.json";
+    const interval = 1000; // 1 second
+
+    let lastModified = null;
+
+    async function check() {
+      try {
+        const res = await fetch(url + "?t=" + Date.now(), {
+          method: "HEAD",
+          cache: "no-store",
+        });
+
+        const lm = res.headers.get("last-modified");
+
+        if (lastModified && lm && lm !== lastModified) {
+          location.reload();
+          return;
+        }
+
+        lastModified = lm || lastModified;
+      } catch (e) {
+        // Ignore
+        console.warn("Reload check failed:", e);
+      }
+
+      setTimeout(check, interval);
+    }
+
+    check();
+  })();
 </script><!-- Also see: https://katex.org/docs/autorender -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css" integrity="sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js" integrity="sha384-J+9dG2KMoiR9hqcFao0IBLwxt6zpcyN68IgwzsCSkbreXUjmNVRhPFTssqdSGjwQ" crossorigin="anonymous"></script>
@@ -493,7 +525,7 @@
   --radius: 5px;
   --article-max-width: 75ex;
   --toc-max-width: 75ex;
-  --text-font-family: PingFang SC, Noto Sans CJK SC, sans-serif;
+  --text-font-family: "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "Segoe UI", "Noto Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* root font size: 16px */
   /* 11pt; */
@@ -575,6 +607,7 @@ body {
   color: var(--text-color);
   font-optical-sizing: auto;
   font-size: 1rem;
+  font-family: var(--text-font-family);
   hyphens: auto;
   background-color: var(--background-color);
 }
@@ -606,7 +639,7 @@ pre {
 code {
   border-radius: var(--radius);
   background-color: var(--background-color-code);
-  padding: 0.2rem;
+  padding: 0.1rem;
   font-size: var(--code-font-size);
 }
 
@@ -698,6 +731,10 @@ p:has(span.katex-html:empty) {
   display: none;
 }
 
+section+p:empty {
+  display: none;
+}
+
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
@@ -750,7 +787,6 @@ details>summary>header {
   display: inline;
 }
 
-/* no effect */
 details>summary::marker,
 details>summary::-webkit-details-marker {
   display: none;
@@ -815,7 +851,11 @@ section.block>details[open] {
   margin-bottom: 1em;
 }
 
-.link-list>section.block>details {
+section.block.link-list>details {
+  margin-bottom: 0em;
+}
+
+section.block.link-list>details>section.block>details {
   margin-bottom: 0.25em;
 }
 
@@ -1087,7 +1127,8 @@ path.typst-shape[fill="#000000"] {
 
 path.typst-shape[stroke="#000000"] {
   stroke: var(--text-color);
-}</style><style>
+}
+</style><style>
 @media only screen and (min-width: 1000px) {
   #grid-wrapper { grid-template-columns: var(--article-max-width) var(--toc-max-width); }
   nav#toc { max-width: max-content; }
@@ -1140,7 +1181,7 @@ path.typst-shape[stroke="#000000"] {
 
 <article><section class="block" data-taxon="Person"><details open><summary id="person-dustin-clausen"><header><h1><span class="taxon">Person. </span>Dustin Clausen <a class="slug" href="https://kokic.github.io/riemann-surfaces/person/dustin-clausen.html">[dustin-clausen]</a><a class="edit" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/person/dustin-clausen.md">[edit]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link external"><a href="https://www.ihes.fr/" title="Institut des Hautes Études Scientifiques [https://www.ihes.fr/]">Institut des Hautes Études Scientifiques</a></span></li><li class="meta-item">Permanent professor</li><li class="meta-item"><span class="link external"><a href="https://www.ihes.fr/~dustin/" title="www.ihes.fr/~dustin [https://www.ihes.fr/~dustin/]">www.ihes.fr/~dustin</a></span></li></ul></div></header></summary>
 <p>Mathematician with interests in algebraic K-theory, number theory, analytic geometry, functional analysis, and homotopy theory. PhD from MIT in 2013 under the supervision of Jacob Lurie.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>Riemann Surfaces <a class="slug" href="https://kokic.github.io/riemann-surfaces/index.html">[index]</a><a class="edit" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/index.md">[edit]</a></h1><div class="metadata"><ul><li class="meta-item">September 3, 2014 - June 24, 2015</li><li class="meta-item"><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/person/dustin-clausen.html" title="Dustin Clausen [person/dustin-clausen]">Dustin Clausen</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>Riemann Surfaces <a class="slug" href="https://kokic.github.io/riemann-surfaces/index.html">[index]</a><a class="edit" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/index.md">[edit]</a></h1><div class="metadata"><ul><li class="meta-item">September 3, 2014 - June 24, 2015</li><li class="meta-item"><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/person/dustin-clausen.html" title="Dustin Clausen [person/dustin-clausen]">Dustin Clausen</a></span></li></ul></div></header></summary>
 <p>This is a Markdown transcription of <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/person/dustin-clausen.html" title="Dustin Clausen [person/dustin-clausen]">Dustin Clausen</a></span>’s <span class="link external"><a href="https://www.ihes.fr/~dustin/#pagenotes" title="course notes [https://www.ihes.fr/~dustin/#pagenotes]">course notes</a></span> on “Riemann Surfaces” (PDFs). All explanatory rights belong to <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/person/dustin-clausen.html" title="Dustin Clausen [person/dustin-clausen]">Dustin Clausen</a></span>. This transcription has been created and shared with the <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/person/dustin-clausen.html" title="Dustin Clausen [person/dustin-clausen]">author</a></span>’s permission. View the <span class="link external"><a href="https://github.com/kokic/riemann-surfaces" title="source on GitHub [https://github.com/kokic/riemann-surfaces]">source on GitHub</a></span>.</p>
 <p><section class="block" data-taxon="Lecture"><details ><summary id="lecture-1"><header><h1><span class="taxon">Lecture. </span>Review of holomorphic functions <a class="slug" href="https://kokic.github.io/riemann-surfaces/lecture-1.html">[lecture-1]</a><a class="edit" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/lecture-1.md">[edit]</a></h1><div class="metadata"><ul><li class="meta-item">September 3, 2014</li><li class="meta-item"><span class="link local"><a href="https://kokic.github.io/riemann-surfaces/person/dustin-clausen.html" title="Dustin Clausen [person/dustin-clausen]">Dustin Clausen</a></span></li><li class="meta-item"><span class="link external"><a href="https://www.ihes.fr/~dustin/files/RiemannSurfaces/RS1.pdf" title="PDF [https://www.ihes.fr/~dustin/files/RiemannSurfaces/RS1.pdf]">PDF</a></span></li></ul></div></header></summary>
 <p>$\gdef\spaces#1{~ #1 ~}$

@@ -2,7 +2,7 @@
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width"><title>Removable singularities</title><link rel="icon" href="https://kokic.github.io/riemann-surfaces/assets/favicon.ico" /><template id="inline-section">
-  <section class="block" data-taxon="">
+  <section class="inline block" data-taxon="">
     <details open="">
       <summary>
         <header>
@@ -460,6 +460,38 @@
       }
     }
   }
+</script><script>
+  (() => {
+    const url = "/kodama.json";
+    const interval = 1000; // 1 second
+
+    let lastModified = null;
+
+    async function check() {
+      try {
+        const res = await fetch(url + "?t=" + Date.now(), {
+          method: "HEAD",
+          cache: "no-store",
+        });
+
+        const lm = res.headers.get("last-modified");
+
+        if (lastModified && lm && lm !== lastModified) {
+          location.reload();
+          return;
+        }
+
+        lastModified = lm || lastModified;
+      } catch (e) {
+        // Ignore
+        console.warn("Reload check failed:", e);
+      }
+
+      setTimeout(check, interval);
+    }
+
+    check();
+  })();
 </script><!-- Also see: https://katex.org/docs/autorender -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css" integrity="sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js" integrity="sha384-J+9dG2KMoiR9hqcFao0IBLwxt6zpcyN68IgwzsCSkbreXUjmNVRhPFTssqdSGjwQ" crossorigin="anonymous"></script>
@@ -493,7 +525,7 @@
   --radius: 5px;
   --article-max-width: 75ex;
   --toc-max-width: 75ex;
-  --text-font-family: PingFang SC, Noto Sans CJK SC, sans-serif;
+  --text-font-family: "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "Segoe UI", "Noto Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* root font size: 16px */
   /* 11pt; */
@@ -575,6 +607,7 @@ body {
   color: var(--text-color);
   font-optical-sizing: auto;
   font-size: 1rem;
+  font-family: var(--text-font-family);
   hyphens: auto;
   background-color: var(--background-color);
 }
@@ -606,7 +639,7 @@ pre {
 code {
   border-radius: var(--radius);
   background-color: var(--background-color-code);
-  padding: 0.2rem;
+  padding: 0.1rem;
   font-size: var(--code-font-size);
 }
 
@@ -698,6 +731,10 @@ p:has(span.katex-html:empty) {
   display: none;
 }
 
+section+p:empty {
+  display: none;
+}
+
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
@@ -750,7 +787,6 @@ details>summary>header {
   display: inline;
 }
 
-/* no effect */
 details>summary::marker,
 details>summary::-webkit-details-marker {
   display: none;
@@ -815,7 +851,11 @@ section.block>details[open] {
   margin-bottom: 1em;
 }
 
-.link-list>section.block>details {
+section.block.link-list>details {
+  margin-bottom: 0em;
+}
+
+section.block.link-list>details>section.block>details {
   margin-bottom: 0.25em;
 }
 
@@ -1087,7 +1127,8 @@ path.typst-shape[fill="#000000"] {
 
 path.typst-shape[stroke="#000000"] {
   stroke: var(--text-color);
-}</style><style>
+}
+</style><style>
 @media only screen and (min-width: 1000px) {
   #grid-wrapper { grid-template-columns: var(--article-max-width) var(--toc-max-width); }
   nav#toc { max-width: max-content; }
@@ -1142,12 +1183,12 @@ path.typst-shape[stroke="#000000"] {
 <p>$\gdef\CC{\mathbb{C}}$</p>
 <p>Let $U \in \CC$ be open, and $z \in U$. Suppose $f: U \backslash \{z\} \to \CC$ is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span>, and is bounded in some disk around $z$. Then $f$ extends uniquely is <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html" title="Holomorphic function [rmsf-1200]">holomorphic</a></span> on all of $U$.</p>
 <p>So merely the fact of $f$ being bounded around $z$ implies something much stronger.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>References</h1></header></summary><section class="block" data-taxon="Definition"><details ><summary id="rmsf-1200"><header><h1><span class="taxon">Definition. </span>Holomorphic function <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html">[rmsf-1200]</a><a class="edit" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/rmsf-1200.md">[edit]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="references"><details open><summary><header><h1>References</h1></header></summary><section class="block" data-taxon="Definition"><details ><summary id="rmsf-1200"><header><h1><span class="taxon">Definition. </span>Holomorphic function <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1200.html">[rmsf-1200]</a><a class="edit" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/rmsf-1200.md">[edit]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\CC{\mathbb{C}}$</p>
 <p>Let $U \in \CC$ be an <span class="link local"><a href="https://kokic.github.io/riemann-surfaces/rmsf-1100.html" title="Open subset [rmsf-1100]">open subset</a></span>, and $f: U \to \CC$ a function. We say that $f$ is holomorphic if it is complex differentiable at $z_0$ for every $z_0 \in U$, i.e. for every $z_0 \in U$ the limit (of complex numbers)</p>
 <p>$$ \lim\limits_{z \to z_0} \frac{f(z) - f(z_0)}{z - z_0} $$</p>
 <p>exists. (The limit value is denoted $f'(z_0)$, as usual.)</p>
-</details></section></details></section><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1400"><header><h1><span class="taxon">Theorem. </span>Cauchy integral formula <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1400.html">[rmsf-1400]</a><a class="edit" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/rmsf-1400.md">[edit]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+</details></section></details></section><section class="block link-list" id="backlinks"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Theorem"><details ><summary id="rmsf-1400"><header><h1><span class="taxon">Theorem. </span>Cauchy integral formula <a class="slug" href="https://kokic.github.io/riemann-surfaces/rmsf-1400.html">[rmsf-1400]</a><a class="edit" href="https://github.com/kokic/riemann-surfaces/edit/main/trees/rmsf-1400.md">[edit]</a></h1><div class="metadata"><ul></ul></div></header></summary>
 <p>$\gdef\CC{\mathbb{C}}$
 $\gdef\spaces#1{~ #1 ~}$
 $\gdef\d{\operatorname{d}}$</p>
